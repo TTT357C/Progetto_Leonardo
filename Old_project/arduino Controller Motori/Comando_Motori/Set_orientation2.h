@@ -4,8 +4,16 @@
  * things
  */
 void turn_on_bridges(){
-  analogWrite(pwm, 200);
 
+  for(int i = 0, i < 21, i++){
+    delay_milliseconds(100);
+    analogWrite(pwm, i*10);
+  }
+
+}
+
+void modify_pwm(int value){
+  // setting the pwm to a value  
 }
 
 
@@ -14,7 +22,11 @@ void turn_on_bridges(){
  * send signals from microcontroller
  */
 void turn_off_bridges(){
-  analogWrite(pwm, 0);
+  for(int i = 0, i < pwm_value, i++){
+    delay_milliseconds(100);
+    analogWrite(pwm, pwm_value - i*10);
+  }
+  
 }
 
 
