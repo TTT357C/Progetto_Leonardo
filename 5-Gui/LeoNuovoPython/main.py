@@ -116,6 +116,7 @@ if __name__ == "__main__":
                 print(ret)
                 try:
                     # Send the received data through the serial bridge
+                    serial_bridge = sw()
                     serial_bridge.send_string(ret)
                 except:
                     print("Error: Failed to send string to serial bridge")
